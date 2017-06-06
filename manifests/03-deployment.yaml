@@ -13,7 +13,7 @@ spec:
         app: k8s-sslmate
     spec:
       containers:
-      - image: roffe/k8s-sslmate
+      - image: pasientskyhosting/k8s-sslmate
         imagePullPolicy: Always
         name: k8s-sslmate
         env:
