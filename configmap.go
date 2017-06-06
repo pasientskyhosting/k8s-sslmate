@@ -4,11 +4,12 @@ import (
 	"k8s.io/client-go/kubernetes"
 	"log"
 	"reflect"
+    meta_v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
 func getConfigmap(clientset *kubernetes.Clientset, firstrun bool) {
 	oldConfigMap := runningConfig
-	cm, err := clientset.Core().ConfigMaps("k8s-sslmate").Get("k8s-sslmate-config")
+	cm, err := clientset.Core().ConfigMaps("k8s-sslmate").Get("k8s-sslmate-config", meta_v1.GetOptions{})
 	if err != nil {
 		log.Fatalf("FATAL: Can't get configMap!, %s", err.Error())
 	}
