@@ -13,8 +13,11 @@ This can be speedup by removing the pod and thereby forcing a complete propagati
 
 
 ## Building
-dep init 
+```
+go get -u github.com/golang/dep/cmd/dep
+dep init
 dep ensure k8s.io/client-go@^2.0.0  
+```
 
 ## Local testing
 When started in a local docker the K8S clientcmd package is used and will need a config file containing certs / token to talk to a K8S cluster
