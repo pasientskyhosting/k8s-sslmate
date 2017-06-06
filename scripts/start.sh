@@ -10,5 +10,4 @@ else
     echo "wildcard_filename star" >> /root/.sslmate
 fi
 
-/opt/bin/gosu root /opt/bin/k8s-sslmate
-
+/bin/gosu root /bin/k8s-sslmate
