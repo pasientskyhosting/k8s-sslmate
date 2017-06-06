@@ -22,7 +22,7 @@ dep ensure k8s.io/client-go@^2.0.0
 ## Local testing
 When started in a local docker the K8S clientcmd package is used and will need a config file containing certs / token to talk to a K8S cluster
 ```
-docker run --rm -it --name k8s-sslmate -e SSLMATE_API_KEY="YourSSLmateAPIkey" -v /path/to/.kube:/opt/.kube roffe/k8s-sslmate
+docker run --rm -it --name k8s-sslmate -e SSLMATE_API_KEY="YourSSLmateAPIkey" -v /path/to/.kube:/opt/.kube pasientskyhosting/k8s-sslmate
 ```
 
 ## Deployment to K8S
